@@ -1,0 +1,222 @@
+<style>
+    #confetti {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 100px;
+        left: -140px;
+        z-index: 100;
+        pointer-events: none;
+    }
+
+    .confetti {
+        position: absolute;
+        width: 10px;
+        height: 10px;
+    }
+
+    .color1 {
+        background-color: #f00;
+    }
+
+    .color2 {
+        background-color: #0f0;
+    }
+
+    .color3 {
+        background-color: #00f;
+    }
+</style>
+<div id="confetti"></div>
+<div class="largura-1_1">
+    <img style="width:100%; right: 0px;" src="recursos/imgs/RM_M1A1_Banner01.svg">
+    <div style="position: absolute;top: 11px;left: 96px;">
+        <p style="font-family: 'OpenSans', sans-serif;color: #08536A;font-size: 15px;font-weight: 900;">POLÍTICAS
+            PÚBLICAS EM SAÚDE</p>
+        <div
+            style="width: 250px;height: 2px;background: #FFAC5A 0% 0% no-repeat padding-box;margin-top: -13px;margin-left: -4px;">
+        </div>
+    </div>
+</div>
+<div class="coluna-esquerda largura-1_1 ">
+    <div style="margin: 16px auto;width: 81%;">
+        <p>
+            O Ministério da Saúde listou atividades que podem ser desenvolvidas para enfrentar as barreiras de
+            equidade
+            em nível individual, dos profissionais e dos serviços e sistemas de saúde. Embarque no tabuleiro de
+            conhecimento e <b>aperte</b> o play quando estiver preparado.
+        </p>
+        <div>
+            <img id="pino" src="recursos/imgs/CODEP_EPPS_M1U2_RIM_10c.svg"
+                style="position: absolute;top: 360px;left: 160px;">
+            <img id="dado" src="recursos/imgs/CODEP_EPPS_M1U2_RIM_10b.svg" style="position: absolute;right: 90px;">
+            <div id="btn_play" style="width: 50px;height: 50px;position: absolute;top: 150px;left: 674px;"></div>
+            <p id="numero_sorteado"
+                style="color: white;font-size: 20px;position: absolute;top: 142px;left: 753px;text-align: center;">0</p>
+            <img src="recursos/imgs/CODEP_EPPS_M1U2_RIM_10a.svg" style="width: 708px;margin-top: 6px;">
+        </div>
+    </div>
+    <div>
+        <div id="janela_1"
+            style="width: 640px;height: 150px;background-color: rgb(255, 172, 90);position: absolute;top: 200px;left: 120px;display: flex;align-items: center;justify-content: center;cursor: pointer;">
+            <div style="width: 520px;">
+                <p>Provimento de ações e materiais educativos, que podem chamar atenção para as especificidades de
+                    determinados grupos ou orientar usuários e usuárias sobre como reportar situações de preconceito;
+                </p>
+            </div>
+            <div style="position: absolute;top: 0px;right: 10px;color: white;">
+                <p>X</p>
+            </div>
+        </div>
+        <div id="janela_2"
+            style="width: 640px;height: 150px;background-color: rgb(255, 172, 90);position: absolute;top: 200px;left: 120px;display: flex;align-items: center;justify-content: center;cursor: pointer;">
+            <div style="width: 520px;">
+                <p>Apoio ao desenvolvimento de habilidades e competências, que podem ser necessárias para profissionais
+                    de saúde acolherem melhor determinados grupos sociais. </p>
+            </div>
+            <div style="position: absolute;top: 0px;right: 10px;color: white;">
+                <p>X</p>
+            </div>
+        </div>
+        <div id="janela_3"
+            style="width: 640px;height: 150px;background-color: rgb(255, 172, 90);position: absolute;top: 200px;left: 120px;display: flex;align-items: center;justify-content: center;cursor: pointer;">
+            <div style="width: 520px;">
+                <p>Adoção de ferramentas de facilitação das comunicações, para que nenhuma pessoa seja excluída do seu
+                    direito à saúde por quaisquer deficiências ou por um nível educacional mais baixo. </p>
+            </div>
+            <div style="position: absolute;top: 0px;right: 10px;color: white;">
+                <p>X</p>
+            </div>
+        </div>
+        <div id="janela_4"
+            style="width: 640px;height: 150px;background-color: rgb(255, 172, 90);position: absolute;top: 200px;left: 120px;display: flex;align-items: center;justify-content: center;cursor: pointer;">
+            <div style="width: 520px;">
+                <p>Realização de atividades de sensibilização, que apoiem processos empáticos no cotidiano dos serviços
+                    e sistemas de saúde. </p>
+            </div>
+            <div style="position: absolute;top: 0px;right: 10px;color: white;">
+                <p>X</p>
+            </div>
+        </div>
+        <div id="janela_5"
+            style="width: 640px;height: 150px;background-color: rgb(255, 172, 90);position: absolute;top: 200px;left: 120px;display: flex;align-items: center;justify-content: center;cursor: pointer;">
+            <div style="width: 520px;">
+                <p>Desenvolvimento e apoio a lideranças locais, as quais podem ser úteis para identificar as demandas
+                    dos grupos sociais e das comunidades, facilitando a ponte entre as pessoas e os serviços de saúde.
+                </p>
+            </div>
+            <div style="position: absolute;top: 0px;right: 10px;color: white;">
+                <p>X</p>
+            </div>
+        </div>
+        <div id="janela_6"
+            style="width: 640px;height: 150px;background-color: rgb(255, 172, 90);position: absolute;top: 200px;left: 120px;display: flex;align-items: center;justify-content: center;cursor: pointer;">
+            <div style="width: 520px;">
+                <p>Provimento de apoio logístico (por exemplo, creches para mulheres mães deixarem seus filhos, apoio
+                    com transporte ou alimentação). </p>
+            </div>
+            <div style="position: absolute;top: 0px;right: 10px;color: white;">
+                <p>X</p>
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="bg-footer" style="padding: 0; height: 40px;">
+    <div style="display: flex;justify-content: space-between;">
+        <div style="display: flex;margin-left: 13px;height: 40px;">
+            <div
+                style="width: 80px;height: 26px;background:  var(--color-blue1);color: white;display: flex;align-items: center;justify-content: center;margin: auto;">
+                <p style="font-weight: 900;font-size: 11px;">Unidade 2</p>
+            </div>
+            <p style="font-size: 11px;width: 210px;margin-left: 10px;margin-top: 6px;">Estudo de caso: identificando
+                domínios de equidade nas políticas de saúde</p>
+        </div>
+        <div style="display: flex;margin-right: 14px;height: 40px;">
+            <div
+                style="width: 80px;height: 26px;background:  var(--color-blue1);color: white;display: flex;align-items: center;justify-content: center;margin: auto;">
+                <p style="font-weight: 900;font-size: 11px;">Módulo 1</p>
+            </div>
+            <p style="font-size: 11px;margin-left: 10px;">(Re)conhecendo o Sistema Único de Saúde</p>
+        </div>
+    </div>
+</footer>
+<script>
+
+    $(() => {
+        let posicoes = [{ top: "149px", left: "272px" }, { top: "149px", left: "612px" }, { top: "329px", left: "572px" }, { top: "329px", left: "239px" }, { top: "204px", left: "400px" }];
+        var numbers = [1, 2, 3, 4, 5, 6];
+        var count = 0;
+        var sorteio = [3, 5, 4, 5, 4];
+        var mycount = 0;
+        let janelas = $(document).find('[id^=janela]').css('cursor', 'pointer').on("click", apagarJanelas);
+        apagarJanelas();
+
+        $("#btn_play").click(function () {
+            $("#btn_play").hide();
+            var intervalId = setInterval(function () {
+                var randomNumber = numbers[Math.floor(Math.random() * numbers.length)];
+                $("#numero_sorteado").text(randomNumber);
+                count++;
+                if (count >= 24) {
+                    clearInterval(intervalId);
+                    $("#numero_sorteado").text(sorteio[mycount]);
+                    moverPino(mycount);
+                    count = 0;
+                    mycount++;
+                }
+            }, 125);
+        }).css('cursor', 'pointer');
+
+        function moverPino(index) {
+            $("#pino").animate(
+                posicoes[index], 1000, () => {
+                    $(janelas[index]).fadeIn();
+                });
+        }
+
+        function apagarJanelas() {
+            janelas.map((index, janela) => {
+                $(janela).hide();
+            })
+            if (mycount != sorteio.length) {
+                $("#btn_play").show();
+            } else {
+                animarConfete();
+            }
+        }
+
+        // função para criar confetes
+        function createConfetti() {
+            var color = Math.floor(Math.random() * 3) + 1;
+            var confetti = $("<div class='confetti color" + color + "'></div>");
+            confetti.css({
+                left: Math.random() * 100 + "%",
+                top: "-10px",
+                transform: "rotate(" + Math.random() * 360 + "deg)"
+            });
+            $("#confetti").append(confetti);
+
+            // animando o confete
+            confetti.animate({
+                top: "100%",
+                left: "+=100%",
+                rotation: "+=360"
+            }, 7000, "linear", function () {
+                confetti.remove();
+            });
+        }
+
+        // criando confetes
+
+        function animarConfete() {
+            var intervalId = setInterval(createConfetti, 50);
+            setTimeout(function () {
+                clearInterval(intervalId);
+            }, 5000);
+        }
+
+
+
+    })
+</script>
+</div>
