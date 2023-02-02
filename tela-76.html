@@ -6,17 +6,17 @@
 	</div>
 </div>
 <div class=" coluna-direita largura-1_2 altura-1_1" style="width: 100%;">
-    <div style="margin: 123px auto auto 0px;width: 86%;">
-        <p>Desde 2010, a regionalização do SUS tem sido influenciada pelas diretrizes de organização das Redes de
-            Atenção à Saúde (RAS). </p>
-        <p>Você sabe o que é uma RAS? </p>
-        <p><b>Clique</b> na imagem e entenda a importância dessas redes.</p>
-    </div>
+	<div style="margin: 123px auto auto 0px;width: 86%;">
+		<p>Desde 2010, a regionalização do SUS tem sido influenciada pelas diretrizes de organização das Redes de
+			Atenção à Saúde (RAS). </p>
+		<p>Você sabe o que é uma RAS? </p>
+		<p><b>Clique</b> na imagem e entenda a importância dessas redes.</p>
+	</div>
 </div>
 <div class="coluna-esquerda largura-1_2 ">
-    <div class="animate__animated animate__backInLeft">
-        <img src="recursos/imgs/CODEP_EPPS_M4U1_RIM39.svg" style="width: 275px;margin-top: 11px;margin-left: 82px;">
-    </div>
+	<div class="animate__animated animate__backInLeft">
+		<img src="recursos/imgs/CODEP_EPPS_M4U1_RIM39.svg" style="width: 275px;margin-top: 11px;margin-left: 82px;">
+	</div>
 </div>
 <footer class="bg-footer" style="padding: 0; height: 40px;">
 	<div style="display: flex;justify-content: space-between;">
@@ -37,6 +37,60 @@
 			</div>
 			<p style="font-size: 11px;margin-left: 10px;color: #FFFFFF;">Regionalização e relações federativas na
 				saúde</p>
+			<div>
+				<div id="botao_1"
+					style="position: absolute;top: -370px;left: 65px;width: 300px;height: 360px;cursor: pointer;">
+				</div>
+			</div>
+			<div>
+				<div id="janela_1"
+					style="width: 603px; height: 218px; background-color: rgb(255, 172, 90); position: absolute; top: -310px; left: 160px; display: flex; align-items: center; justify-content: center; cursor: pointer;">
+					<p style="width: 541px;font: normal normal normal 12px/15px Open Sans;color: #34322C;">As RASs
+						são definidas como “arranjos organizativos de ações e serviços de
+						saúde, de diferentes densidades tecnológicas que, integradas por meio de sistemas de apoio
+						técnico, logístico e de gestão, buscam garantir a integralidade do cuidado” (BRASIL, 2010).
+						As
+						RAS configuram redes segundo linhas de cuidado específicas, sendo extremamente importantes
+						para
+						produzir a expansão da estrutura de serviços em cada uma dessas áreas (materno-infantil,
+						urgência e emergência, oncologia etc.). Contudo, quando não planejadas em perspectiva
+						sistêmica
+						e coerente com o território, as RASs podem acabar reproduzindo a fragmentação entre os
+						serviços
+						e atuando em sentido contrário à integralidade. Cabe lembrar que o sistema de saúde depende
+						da
+						integração entre os distintos pontos de atenção, formando uma rede integrada de serviços de
+						saúde (ORGANIZACIÓN PAN-AMERICANA DE LA SALUD, 2010; KUSCHNIR; CHORNY, 2010).</p>
+					<div style="position: absolute;top: 0px;right: 10px;color: white;">
+						<p>X</p>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 </footer>
+<script>
+	$(() => {
+		let janelas = $(document).find('[id^=janela]').css('cursor', 'pointer').on("click", apagarJanelas);
+		apagarJanelas();
+		$(document).find('[id^=btn]').hide();
+		let botoes = $(document).find('[id^=botao]').map((index, botao) => {
+			$(botao).css('cursor', 'pointer');
+			$(botao).hover(() => {
+				$(document).find(`[id=btn_${index + 1}_2]`).show();
+			});
+			$(botao).mouseleave(() => {
+				$(document).find('[id^=btn]').hide();
+			});
+			$(botao).click(() => {
+				apagarJanelas();
+				$(janelas[index]).fadeIn();
+			})
+		})
+		function apagarJanelas() {
+			janelas.map((index, janela) => {
+				$(janela).hide();
+			})
+		}
+	})
+</script>

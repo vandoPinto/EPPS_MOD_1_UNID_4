@@ -1,59 +1,206 @@
+<style>
+    label {
+        font-size: 13px;
+        font-weight: 500;
+    }
+
+    .questao:hover {
+        background-color: var(--color-aqua-green);
+        cursor: pointer;
+    }
+
+    .marcado {
+        background-color: var(--color-aqua-green);
+    }
+
+    .opWrong {
+        opacity: 0.5;
+    }
+
+    .submeter {
+        margin: 1em auto;
+        font-weight: bold;
+        color: #ffffff;
+        border-radius: 3px;
+        background-color: var(--color-aqua-green);
+        border: solid 0 transparent;
+        outline: none;
+        box-shadow: 0 .1em rgba(0, 0, 0, .5);
+        padding: .5em;
+        display: block;
+        width: 50%;
+        cursor: pointer;
+        text-align: center;
+    }
+</style>
 <div class="largura-1_1">
-	<img style="width:100%; right: 0px;" src="recursos/imgs/RM_M1A1_Banner01.svg">
-	<div style="position: absolute;top: 11px;left: 96px;">
-		<p style="font-family: 'OpenSans', sans-serif;color: #08536A;font-size: 15px;font-weight: 900;">POLÍTICAS
-			PÚBLICAS EM SAÚDE</p>
-	</div>
+    <img style="width:100%; right: 0px;" src="recursos/imgs/RM_M1A1_Banner01.svg">
+    <div style="position: absolute;top: 11px;left: 96px;">
+        <p style="font-family: 'OpenSans', sans-serif;color: #08536A;font-size: 15px;font-weight: 900;">POLÍTICAS
+            PÚBLICAS EM SAÚDE</p>
+    </div>
 </div>
-<div class="coluna-esquerda largura-1_1 ">
-    <div style="margin: 35px auto;width: 83%;">
-        <p>Com relação aos aspectos conceituais da regionalização e descentralização da saúde, leia as afirmativas e
-            indique se elas são verdadeiras (V) ou falsas (F). </p>
-        <p>
-            ( ) A regionalização em saúde no Brasil, em geral, está
-            mais associada à visão de “ferramenta”, embora existam movimentos e experiências que buscam valorizar a
-            história e as especificidades do território para além da perspectiva setorial.
-        </p>
-
-        <p>
-            ( ) Região é o espaço
-            territorial e populacional definido como base para o planejamento e a programação em saúde.
-        </p>
-
-        <p>
-            ( ) A região
-            pode ser considerada uma mera base de cálculo para o planejamento e a programação em saúde. Assim, não é
-            importante que seja respeitada a identidade que já existe entre os municípios e que os caracteriza
-            enquanto
-            região.
-        </p>
-
-        <p>
-            ( ) Em vários países do mundo, descentralização e regionalização foram propostas de forma combinada
-            e coordenada para viabilizar estratégias, ações e respostas às necessidades regionais em sistemas de
-            saúde.
-        </p>
+<div style="margin: 35px auto;width: 81%;">
+    <p>Com relação aos aspectos conceituais da regionalização e descentralização da saúde, leia as afirmativas e
+        indique se elas são verdadeiras (V) ou falsas (F).</p>
+    <div>
+        <form>
+            <input id="opc_1" type="text" size="1" name="opcao" class="12345" maxlength="1">
+            <label>A regionalização em saúde no Brasil, em geral, está
+                mais associada à visão de “ferramenta”, embora existam movimentos e experiências que buscam
+                valorizar a
+                história e as especificidades do território para além da perspectiva setorial.</label><br><br>
+            <input id="opc_2" type="text" size="1" name="opcao" class="12345" maxlength="1">
+            <label> Região é o espaço
+                territorial e populacional definido como base para o planejamento e a programação em
+                saúde.</label><br><br>
+            <input id="opc_3" type="text" size="1" name="opcao" class="12345" maxlength="1">
+            <label>A região
+                pode ser considerada uma mera base de cálculo para o planejamento e a programação em saúde. Assim,
+                não é
+                importante que seja respeitada a identidade que já existe entre os municípios e que os caracteriza
+                enquanto
+                região.</label><br><br>
+            <input id="opc_4" type="text" size="1" name="opcao" class="12345" maxlength="1">
+            <label>Em vários países do mundo, descentralização e regionalização foram propostas de forma combinada
+                e coordenada para viabilizar estratégias, ações e respostas às necessidades regionais em sistemas de
+                saúde.</label><br>
+        </form>
+    </div>
+    <div class="submeter" style="display: none;">Submeter</div>
+    <div style="margin-top: -310px; margin-left: 110px; width: 500px; height: 150px; display: none;" id="feedCerto">
+        <div class="objetivo animate__animated animate__pulse">
+            <div style="margin-top: 80px;">
+                <img class="icone-image" style="width: 11%; margin-right: -3%; margin-top: -24px;"
+                    src="recursos/icones/RM_M1A1_Icones10.svg">
+                <div class="box-click" style="width:450px;margin: 0;">
+                    <div class="line-box">
+                        <div style="margin-left: 20px;">
+                            <h1>Resposta correta</h1>
+                            <p style="margin-top: 15px;">
+                                Muito bem! Você está de parabéns! A região não pode ser considerada uma mera base de
+                                cálculo para o planejamento e a programação em saúde. Assim, é importante que seja
+                                respeitada a identidade que já existe entre os municípios e que os caracteriza
+                                enquanto
+                                região. O planejamento da regionalização da saúde demanda o desenvolvimento de
+                                capacidades gestoras em cada nível de governo e a articulação entre eles para
+                                construção
+                                de planos regionais e redes integradas de sistemas de saúde.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="modal-fechar">
+                        <button class="btn-fechar" onclick="closeModalSim('dv-modal-sim')">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="margin-top: -280px; margin-left: 110px; width: 500px; height: 150px; display: none;" id="feedErrado">
+        <div class="objetivo animate__animated animate__pulse">
+            <div style="margin-top: -95px;">
+                <img class="icone-image" style="width: 11%; margin-right: -3%; margin-top: -24px;"
+                    src="recursos/icones/RM_M1A1_Icones10.svg">
+                <div class="box-click" style="width:450px;margin: 0;">
+                    <div class="line-box">
+                        <div style="margin-left: 20px;">
+                            <h1>Resposta incorreta</h1>
+                            <p style="margin-top: 15px;">
+                                Na verdade, a sequência correta é: V/V/F/V. A região não pode ser considerada uma
+                                mera
+                                base de cálculo para o planejamento e a programação em saúde. Assim, é importante
+                                que
+                                seja respeitada a identidade que já existe entre os municípios e que os caracteriza
+                                enquanto região. O planejamento da regionalização da saúde demanda o desenvolvimento
+                                de
+                                capacidades gestoras em cada nível de governo e a articulação entre eles para
+                                construção
+                                de planos regionais e redes integradas de sistemas de saúde.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="modal-fechar">
+                        <button class="btn-fechar" onclick="closeModalSim('dv-modal-sim')">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 <footer class="bg-footer" style="padding: 0; height: 40px;">
-	<div style="display: flex;justify-content: space-between;">
-		<div style="display: flex;margin-left: 13px;height: 40px;">
-			<div
-				style="width: 80px;height: 26px;background:  var(--color-blue1);color: white;display: flex;align-items: center;justify-content: center;margin: auto;">
-				<p style="font-weight: 900;font-size: 11px;">Unidade 1</p>
-			</div>
-			<p style="font-size: 11px;width: 340px;margin-left: 10px;margin-top: 6px;color: #FFFFFF;">Regionalização
-				e relações
-				federativas na saúde: aspectos conceituais e históricos em perspectiva nacional e
-				internacional</p>
-		</div>
-		<div style="display: flex;margin-right: 14px;height: 40px;">
-			<div
-				style="width: 80px;height: 26px;background:  var(--color-blue1);color: white;display: flex;align-items: center;justify-content: center;margin: auto;">
-				<p style="font-weight: 900;font-size: 11px;">Módulo 4</p>
-			</div>
-			<p style="font-size: 11px;margin-left: 10px;color: #FFFFFF;">Regionalização e relações federativas na
-				saúde</p>
-		</div>
-	</div>
+    <div style="display: flex;justify-content: space-between;">
+        <div style="display: flex;margin-left: 13px;height: 40px;">
+            <div
+                style="width: 80px;height: 26px;background:  var(--color-blue1);color: white;display: flex;align-items: center;justify-content: center;margin: auto;">
+                <p style="font-weight: 900;font-size: 11px;">Unidade 1</p>
+            </div>
+            <p style="font-size: 11px;width: 340px;margin-left: 10px;margin-top: 6px;color: #FFFFFF;">Regionalização
+                e relações
+                federativas na saúde: aspectos conceituais e históricos em perspectiva nacional e
+                internacional</p>
+        </div>
+        <div style="display: flex;margin-right: 14px;height: 40px;">
+            <div
+                style="width: 80px;height: 26px;background:  var(--color-blue1);color: white;display: flex;align-items: center;justify-content: center;margin: auto;">
+                <p style="font-weight: 900;font-size: 11px;">Módulo 4</p>
+            </div>
+            <p style="font-size: 11px;margin-left: 10px;color: #FFFFFF;">Regionalização e relações federativas na
+                saúde</p>
+        </div>
+    </div>
 </footer>
+<script>
+    $(() => {
+        pontos = 0;
+        let respondido = [];
+        let gabarito = ["V", "V", "F", "V"];
+        let comparacao = [];
+        let mostrarSub = true;
+        let resposta = '';
+
+        let feedCerto = $(document).find('[id^=feedCerto]').hide();
+        let feedErrado = $(document).find('[id^=feedErrado]').hide();
+        let submeter = $(document).find('[class=submeter]').hide();
+        let questao = $(document).find('[id^=opc]');
+
+        $(feedCerto).on('click', apagarFeeds);
+        $(feedErrado).on('click', apagarFeeds);
+
+        function apagarFeeds() {
+            feedCerto.fadeOut();
+            feedErrado.fadeOut();
+        }
+
+        questao.map((index, sel) => {
+            respondido[index] = false;
+            comparacao[index] = false;
+            $(sel).click(responder);
+        });
+
+        function responder(sel) {
+            resposta = sel.target.id;
+            respondido[((sel.target.id).split("_")[1]) - 1] = true;
+            console.log(respondido);
+            if (mostrarSub && respondido.every(elem => elem == true)) {
+                submeter.fadeIn();
+            }
+        }
+
+        $(submeter).on('click', () => {
+            questao.map((index, selected) => {
+                if (selected.value.toUpperCase() == gabarito[index].toUpperCase()) {
+                    comparacao[index] = true;
+                }
+            })
+
+            if (comparacao.every(elem => elem == true)) {
+                $(feedCerto).fadeIn();
+                pontos += 1;
+                mostrarSub = false;
+                submeter.hide();
+            } else {
+                $(feedErrado).fadeIn();
+            }
+        })
+    })
+</script>
