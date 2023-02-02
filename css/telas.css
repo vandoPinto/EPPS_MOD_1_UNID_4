@@ -68,6 +68,7 @@ main {
     --color-orange5: #FFDDBf;
     --color-yellow: #FFD008;
     --color-aqua-green: #72AFA6;
+    --color-aqua-green1: #B6D7C1;
 }
 
 .animate.delay {
@@ -207,7 +208,7 @@ footer {
 .nav-telas-progresso a {
     display: table-cell;
     height: 10px;
-    background-color: var(--color-aqua-green);
+    background-color: var(--color-aqua-green1);
     border: 1px #fff solid;
     border-collapse: collapse;
     position: relative;
