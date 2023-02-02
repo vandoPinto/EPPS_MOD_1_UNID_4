@@ -67,6 +67,7 @@ main {
     --color-orange4: #F9C395;
     --color-orange5: #FFDDBf;
     --color-yellow: #FFD008;
+    --color-aqua-green: #72AFA6;
 }
 
 .animate.delay {
@@ -101,7 +102,7 @@ main {
     display: none;
     width: 40px;
     height: 85px;
-    background: var(--color-orange) center center no-repeat;
+    background: var(--color-aqua-green) center center no-repeat;
     /* box-shadow: 0 3px 2px rgba(0, 0, 0, 0.5);*/
     position: absolute;
     top: 50%;
@@ -176,7 +177,7 @@ main {
 }
 
 .bg-footer {
-    background-color: var(--color-orange);
+    background-color: var(--color-aqua-green);
     color: var(--color-blue1);
 }
 
@@ -206,7 +207,7 @@ footer {
 .nav-telas-progresso a {
     display: table-cell;
     height: 10px;
-    background-color: var(--color-orange1);
+    background-color: var(--color-aqua-green);
     border: 1px #fff solid;
     border-collapse: collapse;
     position: relative;
@@ -225,11 +226,11 @@ footer {
 }
 
 .nav-telas-progresso .tela-atual {
-    background-color: var(--color-orange);
+    background-color: var(--color-aqua-green);
 }
 
 .nav-telas-progresso .tela-visualizada {
-    background-color: var(--color-orange);
+    background-color: var(--color-aqua-green);
 }
 
 .nav-telas-progresso a>span>span {
@@ -343,7 +344,7 @@ a:hover {
 
 .objetivo-modal {
     width: 400px;
-    background-color: var(--color-orange1);
+    background-color: var(--color-aqua-green);
     margin: 121.25px auto;
     padding: 20px;
 }
@@ -364,7 +365,7 @@ a:hover {
 .saiba-mais-modal {
     height: 184px;
     width: 470px;
-    background-color: var(--color-orange);
+    background-color: var(--color-aqua-green);
     margin: 164px auto;
     padding-left: 30px;
     padding-right: 30px;
@@ -385,7 +386,7 @@ a:hover {
 .saiba-mais-modal .close {
     width: 20px;
     height: 20px;
-    background-color: var(--color-orange);;
+    background-color: var(--color-aqua-green);
     position: absolute;
     right: 0px;
     top: -24px;
@@ -1024,7 +1025,7 @@ audio {
 /* Botões da aula */
 
 .btn-aula01 {
-    background-color: var(--color-orange1);
+    background-color: var(--color-aqua-green);
     color: var(--color-blue1);
     height: 70px;
     width: 65%;
@@ -1306,7 +1307,7 @@ li {
 .box-click {
     width: 460px;
     /* background: linear-gradient( 180deg, var(--color-orange2), var(--color-orange3)); */
-    background: transparent linear-gradient(90deg, #F9C395 0%, #FDB26C 62%, #FFAB5A 99%, #FFAB5A 100%) 0% 0% no-repeat padding-box;
+    background: transparent linear-gradient(180deg, #7CB8AF 0%, #59B6BB 59%, #47B5C3 100%, #47B5C3 100%) 0% 0% no-repeat padding-box;
     margin: 0 auto;
     padding: 20px;
 }
