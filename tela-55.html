@@ -6,22 +6,24 @@
 	</div>
 </div>
 <div class="coluna-esquerda largura-1_2 altura-1_1" style="width: 100%;">
-    <div style="margin: 123px auto auto 38px;width: 83%;">
-        <p>Nesse cenário, começou a ser resgatado o papel do nível estadual no planejamento regional, até então
-            pouco
-            abordado. Esse momento representou o início de uma inflexão acerca dos entendimentos sobre
-            descentralização
-            e regionalização na saúde, propondo como instrumento a Programação Pactuada e Integrada (<b>PPI</b>) – a
-            PPI segue
-            vigente, mas em processo de substituição pela Programação Geral das Ações e Serviços de Saúde (PGASS),
-            que é
-            um instrumento semelhante.</p>
-    </div>
+	<div style="margin: 101px auto auto 38px;width: 83%;">
+		<p>Nesse cenário, começou a ser resgatado o papel do nível estadual no planejamento regional, até então
+			pouco
+			abordado. Esse momento representou o início de uma inflexão acerca dos entendimentos sobre
+			descentralização
+			e regionalização na saúde, propondo como instrumento a Programação Pactuada e Integrada (<strong
+				style="width: 40px; background-color: #72AFA6; display: inline;"><a id="hotWord-bt"
+					style="cursor: pointer;">PPI</a></strong>) – a
+			PPI segue
+			vigente, mas em processo de substituição pela Programação Geral das Ações e Serviços de Saúde (PGASS),
+			que é
+			um instrumento semelhante.</p>
+	</div>
 </div>
 <div class="coluna-direita largura-1_2 ">
-    <div class="animate__animated animate__backInRight">
-        <img src="recursos/imgs/CODEP_EPPS_M4U1_RIM27.svg" style="width: 275px;margin-top: 17px;margin-right: 59px;">
-    </div>
+	<div class="animate__animated animate__backInRight">
+		<img src="recursos/imgs/CODEP_EPPS_M4U1_RIM27.svg" style="width: 275px;margin-top: 17px;margin-right: 59px;">
+	</div>
 </div>
 <footer class="bg-footer" style="padding: 0; height: 40px;">
 	<div style="display: flex;justify-content: space-between;">
@@ -45,3 +47,23 @@
 		</div>
 	</div>
 </footer>
+<div id="conteudo"
+	style="position: absolute;top: 274px;left: 140px;width: 251px;height: 180px;background: #2F5579 0% 0% no-repeat padding-box;display: flex;align-items: center;justify-content: center;">
+	<p style="width: 233px;font: normal normal normal 12px/17px Open Sans;color: #FFFFFF;">
+		A PPI é um instrumento de planejamento físico e financeiro da regionalização no SUS. Coordenada pelo gestor
+		estadual com participação de todos os gestores municipais, ela deveria refletir as pactuações
+		intergovernamentais para garantia do acesso aos serviços ambulatoriais, hospitalares e de alto custo nas
+		regiões
+		de saúde.</p>
+</div>
+<script>
+	$(() => {
+		let conteudo = $('#conteudo').hide();
+		$('#hotWord-bt').css('cursor', 'pointer').hover(() => {
+			conteudo.fadeIn()
+		})
+		$('#hotWord-bt').mouseout(() => {
+			conteudo.fadeOut()
+		})
+	})
+</script>
